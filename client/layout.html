@@ -1,0 +1,12 @@
+<template name="layout">
+	{{> Template.dynamic template=nav}}		
+	<div id="main" class="container buffer-top-xl buffer-bottom-xl">
+		{{#if mlsReady}}
+			{{> Template.dynamic template=main}}
+		{{else}}
+			<div class="bold text-16 text-red center">
+				fetching agency information...
+			</div>
+		{{/if}}
+	</div>
+</template>

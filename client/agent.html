@@ -1,0 +1,19 @@
+<template name="agent">
+	<div class="right">
+		<div class="text-16">
+			{{firstName}} {{lastName}}
+		</div>
+		<div class="text-14">
+			{{location}}
+		</div>
+		{{#if phoneNumber}}
+			<div class="text-14">
+				<a href="tel:{{phoneNumber}}"><span class="text-blue"><i class="fa fa-phone"></i> {{phoneNumber}}</span></a>
+			</div>
+		{{/if}}
+		<div class="text-24">
+			<i class="text-gold fa fa-trophy"></i> <span class="text-red">{{score}}</span>
+		</div>
+		<hr class="margin-right">
+</div>
+</template>

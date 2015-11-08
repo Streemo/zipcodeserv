@@ -1,0 +1,119 @@
+#main {
+	max-width: 800px;
+}
+
+.squeeze {
+	max-width: 200px
+}
+
+.nav-btn {
+	padding: 15px;
+	display: inline-block;
+}
+
+.navigation {
+	top: 0px;
+	background-color: #fff;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.buffer-top-xl {
+	margin-top: 70px;
+}
+
+.buffer-bottom-xl {
+	margin-bottom: 70px;
+}
+
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.buffer-right {
+	margin-right: 15px;
+}
+
+.left {
+	text-align: left !important;
+}
+
+.right {
+	text-align: right;
+}
+
+.hr-left {
+	margin-left: 0px;
+}
+
+.hr-right {
+	margin-right: 0px;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-none {
+	float: none;
+}
+
+.buffer-none {
+	margin-top: 0px !important;
+}
+
+.buffer-top-sm {
+	margin-top: 5px !important;
+}
+
+.buffer-top-md {
+	margin-top: 10px;
+}
+
+.padding-all {
+	padding: 25px;
+}
+
+.buffer-top {
+	margin-top: 20px;
+}
+
+.buffer-top-lg {
+	margin-top: 60px;
+}
+
+.buffer-bottom {
+	margin-bottom: 20px;
+}
+
+html, body {
+	background-color: inherit;
+}
+
+body {
+	display: none;
+}
+
+hr {
+	width: 50%;
+}
+
+textarea {
+	resize: none;
+}
+
+.hr-full {
+	width: 100%;
+}
+
+.hr-thick {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.hr-xthick {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}

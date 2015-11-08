@@ -1,0 +1,92 @@
+<template name="main">
+	<div class="buffer-top row">
+		<div class="col-sm-12">
+			<div class="bold text-20 center buffer-bottom">
+				find agents who understand how to sell your home
+			</div>
+			{{#unless searched}}
+				<div class="text-18 center">
+					tell us about your place
+				</div>
+				<form class='accounts-form'>
+					<div>
+				  		<label>
+							where are you?
+						</label>
+				    	<select id="mlsSelect" class="form-control buffer-top-sm">
+				   			<option selected>AZ</option>
+				    	</select>
+				  	</div>
+					<div>
+						<label for="enterYearBuilt">
+							year built
+						</label>
+				    	<input id="enterYearBuilt" type="number" class="form-control input" placeholder="1984" min="1800">
+				  	</div>
+				  	<div>
+				  		<label for="enterSellingPrice">
+							your starting price
+						</label>
+				    	<input id="enterSellingPrice" type="number" class="form-control input" placeholder="245000">
+				  	</div>
+				  	<div>
+				  		<label for="enterSqFt">
+							sq ft
+						</label>
+				    	<input id="enterSqFt" type="number" class="form-control input" placeholder="3940">
+				  	</div>
+				  	<div>
+				  		<label>
+							does it share the building?
+						</label>
+				    	<select id="ownSelect" class="form-control buffer-top-sm">
+				   			<option>yes</option>
+				   			<option selected>no</option>
+				    	</select>
+				  	</div>
+				  	<div>
+				  		<button type="submit" class="btn btn btn-flat btn-green btn-findaddy" data-loading-text="..." id="getSeed">find!</button>
+				  	</div>
+				  	{{> message location='findaddy'}}
+				</form>
+			{{else}}
+				{{#if agentsReady}}
+					{{#if officesReady}}
+						<div class="col-sm-6">
+							<div class="bold text-green text-20 left buffer-bottom">
+								offices
+							</div>
+							{{#each offices}}
+								{{>office}}
+							{{else}}
+								<div class="bold text-red text-14 center">
+									no good offices...
+								</div>
+							{{/each}}
+						</div>
+						<div class="col-sm-6">
+							<div class="bold text-green text-20 right buffer-bottom">
+								agents
+							</div>
+							{{#each agents}}
+								{{>agent}}
+							{{else}}
+								<div class="bold text-red text-14 center">
+									no good agents...
+								</div>
+							{{/each}}
+						</div>
+					{{else}}
+						<div class="bold text-red text-16 center">
+							computing personalized offices...
+						</div>
+					{{/if}}
+				{{else}}
+					<div class="bold text-16 text-red center">
+						finding experienced agents...
+					</div>
+				{{/if}}
+			{{/unless}}
+		</div>
+	</div>
+</template>
